@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -10,33 +9,38 @@
     <section class="overlay">
 			<h1>Sign In</h1>
       <p></p>
-      <form action="submission.html" method="GET">
-        <label for="username">Username:</label>
+      <form method="POST" action="./action.html" onsubmit="return checkForm(this);">
+         <label for="username">Username:</label>
+         <br>
+		<input id="username" name="username" type="text" required minlength="3" maxlength="15">
         <br>
-				<input id="username" name="username" type="text" required minlength="3" maxlength="15">
-        <br>
-	<br>
+	    <br>
         <label for="pw">Password:</label>
         <br>
         <!--Add the pattern attribute to the input below-->
-				<input id="pw" name="pw" type="password" required minlength="8" maxlength="15">
+				<input id="pwd1" name="pwd1" type="password" required minlength="8" maxlength="15">
         <br>
-	<br>
-	 <br>
+	    <br>
+	    <br>
         <input type="submit" value="Submit">
       </form>
     </section>
   </body>
 	<style>
-		
-		   <style>
-    body {
-        background: white }
-    section {
-	    font-size:40px
-        background: #ffbf00;
+	label{
+	font-size:20px
+	}
+	input{
+	font-size:20px
+	}
+	h1{
+	font-size:20px
+	}
+    section.overlay{
+	  
+        background-color: #ffbf00;
         color: black;
-        #ffbf00border-radius: 1em;
+        border-radius: 1em;
         padding: 1em;
         position: absolute;
         top: 50%;
@@ -45,6 +49,25 @@
         transform: translate(-50%, -50%) }
   </style>
  
-	  </style>
+ <script type="text/javascript">
+
+
+  function checkForm(form)
+  {
+    if(form.username.value == "ggg" && form.pwd1.value == "tttttttt")
+    {
+    alert("OK")
+      return true;
+    }
+    else {
+    alert("Fail")
+      return false;
+    }
+  }
+
+
+  
+</script>
+	  
 	
 </html>
