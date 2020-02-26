@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AUBrowser Access</title>
+</head>
+
+<body>
+<section class="overlay">
+			<h1>Sign In</h1>
+      <p></p>
+      <form method="POST" action="action.html" onsubmit="return checkForm(this);">
+         <label for="username">Username:</label>
+         <br>
+		<input id="username" name="username" type="text" required minlength="3" maxlength="15">
+        <br>
+	    <br>
+        <label for="pw">Password:</label>
+        <br>
+        <!--Add the pattern attribute to the input below-->
+				<input id="pwd1" name="pwd1" type="password" required minlength="8" maxlength="15">
+        <br>
+	    <br>
+	    <br>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+</body>
+<style>
+	label{
+	font-size:20px
+	} 
+	input{
+	font-size:20px
+	}
+	h1{
+	font-size:20px
+	}
+</html>
