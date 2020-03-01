@@ -1,15 +1,40 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>AUBrowser Access</title>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign In Page</title>
+	  
+<style>
+#panel, .flip {
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  border: solid 1px #a6d8a8;
+  margin: auto;
+  display : none;
+}
+​label{
+	font-size:20px
+	} 
+	input{
+	font-size:20px
+	}
+	h1{
+	font-size:20px
+	}
+</style>
 </head>
-
 <body>
-<section class="overlay">
+<section class="şoverlay" id = 'mysection'>
 			<h1>Sign In</h1>
       <p></p>
-      <form method="POST" action="action.html" onsubmit="return checkForm(this);">
+    <!--  <form method="POST" action="./action.html"  onsubmit="return checkForm(this);"> -->
+      
+      <form method="POST" onsubmit="return checkForm(this);">
          <label for="username">Username:</label>
          <br>
 		<input id="username" name="username" type="text" required minlength="3" maxlength="15">
@@ -25,15 +50,26 @@
         <input type="submit" value="Submit">
       </form>
     </section>
+<div id="panel">
+<h1> Do not display</h1>
+</div>
+​
+<script>
+
+function checkForm(form)
+  {
+    if(form.username.value == "ggg" && form.pwd1.value == "tttttttt")
+    {
+    
+    document.getElementById("panel").style.display = "block";
+      return true;
+    }
+    else {
+    alert("Fail")
+      return false;
+    }
+  }
+</script>
+​
 </body>
-<style>
-	label{
-	font-size:20px
-	} 
-	input{
-	font-size:20px
-	}
-	h1{
-	font-size:20px
-	}
 </html>
